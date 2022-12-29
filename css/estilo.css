@@ -1,0 +1,88 @@
+@charset "utf-8";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Helvetica;
+}
+
+body{
+    background-color: #282a36;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3em;
+}
+
+#calc{
+    width: 400px;
+    padding: .5em;
+    background-color: #8361a1;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.45);
+}
+
+#calc h3{
+    font-size: .8em;
+    font-weight: 300;
+    color: white;
+    text-transform: uppercase;
+}
+
+#operations{
+    text-align: right;
+}
+
+#previous-operation{
+    color: #DBDBDB;
+    padding: .2em;
+    font-size: 1.5em;
+    overflow-wrap: break-word; /*quebra para  a linha debaixo, para não vazar da calculadora*/
+    min-height: 1.6em;
+}
+
+#current-operation{
+    min-height: 1.6em;
+    font-size: 3em;
+    font-weight: 700px;
+    padding: 0.2em;
+    overflow-wrap: break-word;
+}
+
+#buttons-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr; /*trabalha com tamanho fracionado, nesse caso 4 frações para cada quadrado*/
+    gap: 3px; /*da um espaçamento entre os quadrados*/
+}
+
+#buttons-container button{
+    border: 1px solid transparent;
+    border-radius: 0;
+    height: 4em;
+    font-size: 1.2em;
+    background-color: #DBDBDB;
+    cursor: pointer;
+    color: #8361a1;
+}
+
+#buttons-container .number{
+    background-color: #F3F3F3;
+}
+
+#buttons-container button:hover{
+    background-color: #bd63bb;
+    border-color: #999;
+    color: white;
+}
+
+#buttons-container #equal-button{
+    grid-column: span 2; /*span 2 para ocupar duas linhas*/
+    background-color: #DBDBDB;
+}
+
+#buttons-container #equal-button:hover{
+    background-color: #bd63bb;
+}
